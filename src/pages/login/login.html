@@ -1,0 +1,37 @@
+<ion-content padding class="page-container">
+  <div class="page-header">
+    <p class="page-header--title">Mentimun Vendor Center</p>
+    <p class="page-header--subtitle">Silahkan Login</p>
+  </div>
+  <form
+    [formGroup]="input"
+    (ngSubmit)="submitLogin()">
+    <div class="page-form--default">
+      <div class="page-form--input">
+        <ion-input
+          type="text"
+          placeholder="Username"
+          formControlName="username"
+        ></ion-input>
+      </div>
+      <div class="page-form--divider"></div>
+      <div class="page-form--input">
+        <ion-input
+          type="password"
+          placeholder="Password"
+          formControlName="password"
+        ></ion-input>
+      </div>
+    </div>
+    <div class="page-form--submit">
+      <button ion-button block
+        type="submit"
+        color="green">
+        Login
+      </button>
+    </div>
+  </form>
+  <div class="page-form--footer">
+    <p>Copyright {{year()}} © {{config.getConfig().URL_PATH}}</p>
+  </div>
+</ion-content>

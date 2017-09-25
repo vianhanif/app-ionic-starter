@@ -1,0 +1,43 @@
+@import "../../theme/variables";
+@import "../../theme/functions";
+
+.page {
+  &-container {
+    background-color: map-get($colors, accent);
+  }
+  &-header {
+    text-align: center;
+    color: map-get($colors, secondary);
+    &--title {
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    &--subtitle {
+      font-size: 24px;
+    }
+  }
+  &-form {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 50px;
+    &--default, &--submit, &--footer {
+      @extend .page-form;
+    }
+    &--default {
+      background-color: map-get($colors, secondary);
+      border-radius: map-get($app, radius);
+    }
+    &--divider {
+      height: 1px;
+      background-color: shade(map-get($colors, secondary), 10%);
+    }
+    &--footer {
+      margin-left: 10px;
+      margin-right: 10px;
+      color: map-get($colors, secondary);
+      text-align: center;
+      font-size: 15px;
+    }
+  }
+}
